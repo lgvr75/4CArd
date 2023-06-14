@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+Unidades Relativas %
+Undades Absolutas px
+*/
+
+/* estilos Generales */
+
+.container{
+    width: 80%;
+    margin: 30px auto 40px;
+    
+}
+.container article{
+    padding: 2rem;
+    border-top: 5px solid blue;
+    border-radius: 10px;
+    box-shadow: -4px 6px 12px 0px #00000038;
+}
+.container article p{
+    margin: 1rem 0;
+}
+.row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.col{
+    flex-basis: 33.33%;
+}
+.direccionCol{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;    
+}
+
+.container aside div{  
+    text-align: right;
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); }
