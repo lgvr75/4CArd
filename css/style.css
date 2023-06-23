@@ -1,3 +1,10 @@
+/*
+Unidades Relativas %
+Undades Absolutas px
+*/
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 :root{
@@ -6,23 +13,36 @@
     --Orange: hsl(34, 97%, 64%);
     --Blue: hsl(212, 86%, 64%);
 }
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'Poppins', sans-serif;
 }
 
-/*
-Unidades Relativas %
-Undades Absolutas px
-*/
+section{
+    background-color: chartreuse;
+}
 
 /* estilos Generales */
+.encabezado{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.EncabezadoCol{
+    padding: 5px, 30px;
+    background-color: blueviolet;
+    align-items: center;
+}
+
+
+
 
 .container{
     width: 80%;
@@ -31,7 +51,6 @@ Undades Absolutas px
 }
 .container article{
     padding: 2rem;
-    border-top: 5px solid blue;
     border-radius: 10px;
     box-shadow: -4px 6px 12px 0px #00000038;
 }
@@ -56,9 +75,101 @@ Undades Absolutas px
     text-align: right;
 }
 
+.titulo{
+    font-size: larger
+}
 
+.parrafo{
+    font-size: smaller;
+}
+
+
+.red{
+    border-top: 5px solid var(--Red);
+ }
+ 
+ .cyan{
+     border-top: 5px solid var(--Cyan);
+ }
+ 
+ .orange{
+     border-top: 5px solid var(--Orange);
+ }
+ 
+ .blue{
+     border-top: 5px solid var(--Blue);
+ }
 
 .attribution {
     font-size: 11px; text-align: center; }
 .attribution a { 
     color: hsl(228, 45%, 44%); }
+
+
+/*Responsive*/
+/*media qqueries o breakpoints*/
+/*Rescribir as reglas de Escritorio*/
+
+/*tablet*/
+
+/*
+@media screen and (min-width:511px) and (max-width:768px) {
+    body{
+        background-color: chocolate;
+    }
+    .container{
+        width: 80%;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+
+  PARA DEJARR ELEMENTOS A UNA SOLA COLUMNA  
+}
+*/
+
+@media screen and (min-width:511px) and (max-width:768px) {
+    body{
+        background-color: chocolate;
+    }
+    .container{
+        width: 80%;
+    }
+    .col{
+        flex-basis: 50%;
+        pad: 1rem;
+    }
+    .row{
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .lastColumn{
+        transform: translate(-100%);
+    }
+    .order1{
+        order: 1;
+    }
+    .order2{
+        order: 2;
+    }
+}
+
+/*MOvile*/
+@media screen and (max-width:510px) {
+    body{
+        background-color: blue;
+    }
+    .container{
+        width: 90%;        
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+}
